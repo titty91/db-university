@@ -1,0 +1,11 @@
+GOAL: 
+Sulla base di quanto visto a lezione modellizzare la realta' di un'universita' definendo colonne con nome, tipo di dato e vincoli di integrita' per queste entita':
+- dipartimento
+- corso di laurea
+- corso
+- insegnante
+- appello
+- studento
+- esitoOgni dipartimento e' composto da corsi di laura, formati da corsi, gestiti da insegnanti, 
+che prevedono appelli per studenti, che avranno un esito finaleNOTE: come detto in classe, 
+in caso di ambiguita', cercare di immaginare una possibile realta', e nel caso sia una scelta poco chiara, descriverla con poche parole
