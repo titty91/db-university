@@ -1,0 +1,74 @@
+DIPARTIMENTO 
+    nome: VARCHAR(128) ; NOT NULLABLE
+    sede: VARCHAR(128) ; NOT NULLABLE
+    direttore: VARCHAR(32) ; NOT NULLABLE
+    n_dipendenti: SMALLINT ; NOT NULLABLE
+    n_corsi_di_laurea: SMALLINT ; NOT NULLABLE
+
+CORSO DI LAUREA
+    nome: VARCHAR(128) ; NOT NULLABLE
+    tipo_laurea: VARCHAR(16) ; NOT NULLABLE
+    n_materie: TINYINT ; NOT NULLABLE
+    n_studenti: INT ; NOT NULLABLE
+    n_dipendenti: SMALLINT ; NOT NULLABLE
+    sede: VARCHAR(128) ; NOT NULLABLE
+
+CORSO
+    durata: VARCHAR(128) ; NOT NULLABLE
+    giorni_lezioni: VARCHAR(128) ; NOT NULLABLE
+    frequenza_obbligatoria:  VARCHAR(2) ; DEFAULT("SI")
+    frequenza_obbligatoria_ore:  TINYINT ; NULLABLE
+    ore_totali_corso: TINYINT ; NOT NULLABLE
+    programma_corso: TEXT ; NOT NULLABLE
+
+INSEGNANTE
+    nome: VARCHAR(32) ; NOT NULLABLE
+    cognome: VARCHAR(32) ; NOT NULLABLE
+    username: VARCHAR(16) ; NOT NULLABLE
+    password: VARCHAR(16) ; NOT NULLABLE    
+    foto: VARCHAR ; NOT NULLABLE
+    indirizzo: VARCHAR ; NOT NULLABLE
+    email: VARCHAR(64) ; NOT NULLABLE ; UNIQUE
+    n_tel: VARCHAR(16) ; NULLABLE
+    data_nascita: DATE ; NOT NULLABLE
+    luogo_nascita: VARCHAR(64) ; NOT NULLABLE
+    cf: VARCHAR(64) ; NOT NULLABLE ; UNIQUE
+    genere: VARCHAR(16) ; NOT NULLABLE
+    data_assunzione: DATE ; NOT NULLABLE
+    ruolo: VARCHAR(32) ; NOT NULLABLE
+    turno: VARCHAR(128) ; NULLABLE
+    salario: INT ; NOT NULLABLE
+    tipo_contratto: VARCHAR(64) ; NOT NULLABLE
+    materia: VARCHAR(32) ; NOT NULLABLE
+    corsi: TINYINT ; DEFAULT(0)
+    note_disciplinari ; TEXT ; DEFAULT("")
+
+STUDENTE
+    matricola: INT; NOT NULLABLE
+    nome: VARCHAR(32) ; NOT NULLABLE
+    cognome: VARCHAR(32) ; NOT NULLABLE
+    username: VARCHAR(16) ; NOT NULLABLE
+    password: VARCHAR(16) ; NOT NULLABLE  
+    indirizzo: VARCHAR ; NOT NULLABLE
+    email: VARCHAR(64) ; NOT NULLABLE ; UNIQUE
+    n_tel: VARCHAR(16) ; NULLABLE
+    data_nascita: DATE ; NOT NULLABLE
+    luogo_nascita: VARCHAR(64) ; NOT NULLABLE
+    cf: VARCHAR(64) ; NOT NULLABLE ; UNIQUE
+    genere: VARCHAR(16) ; NOT NULLABLE
+    tipo_documento: VARCHAR(16) ; NOT NULLABLE
+    n_documento: VARCHAR(32) ; NOT NULLABLE ; UNIQUE
+    note_disciplinari ; TEXT ; DEFAULT("")
+    stato_in_corso ; VARCHAR(16) ; DEFAULT("SI")
+    anni_fuoricorso ; TINYINT; NULLABLE
+
+APPELLO
+   facolta: VARCHAR(64) ; NOT NULLABLE
+   materia: VARCHAR(64) ; NOT NULLABLE
+   tipologia: VARCHAR(8) ; NOT NULLABLE //scritto o orale
+   data: DATETIME ; NOT NULLABLE
+
+ESITO
+    presenza_ore_corso: TINYINT ; NOT NULLABLE
+    assenze_ore_corso: TINYINT ; NOT NULLABLE
+    voto: TINYINT ; NOT NULLABLE
