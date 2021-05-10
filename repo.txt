@@ -9,3 +9,22 @@ Sulla base di quanto visto a lezione modellizzare la realta' di un'universita' d
 - esitoOgni dipartimento e' composto da corsi di laura, formati da corsi, gestiti da insegnanti, 
 che prevedono appelli per studenti, che avranno un esito finaleNOTE: come detto in classe, 
 in caso di ambiguita', cercare di immaginare una possibile realta', e nel caso sia una scelta poco chiara, descriverla con poche parole
+
+
+repo 2:
+Sulla base di quanto visto a lezione modellizzare la realta' di un'universita' definendo colonne con nome, tipo di dato e vincoli di integrita' per queste entita':
+- dipartimento
+- corso di laurea
+- corso
+- insegnante
+- appello
+- studento
+- esitoIn ogni dipartimento vi sono piu' corsi di laurea
+Ogni corso di laurea ha piu' corsi
+Ogni corso laurea ha piu' studenti
+Ogni corso e' gestito da uno o piu' insegnante
+Ogni corso ha piu' appelli
+Ogni appello e' gestito da un'insegnante e vi partecipano piu' studenti
+Ogni appello ha un esito per studenteNOTE 1: al contrario di quanto visto venerdi', oggi cerchiamo di limitare il numero dei campi di ogni tabella allo stretto indispensabile, per concentrarci di piu' su relazioni, chiavi esterne e tebelle ponte
+NOTE 2: utilizzare repo di venerdi'; caricare screenshot, pdf o simili
+NOTE 3: per la generazione del disegno e' possibile utilizzare Dia (vedi link piu' in alto), Paint, CS o qualsiasi altro programma conosciate
